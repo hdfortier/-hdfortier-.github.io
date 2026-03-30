@@ -1,0 +1,256 @@
+header, nav, main, footer { display: block; }
+
+/*global styles*/
+body { 
+background-image: url("../images/wood.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+/* sets width and centers content */
+#wrapper { width: 960px;
+           margin: auto;
+		   background-color: #F2ECE4;
+		   color: #5C4033;
+		   box-shadow: 5px 5px 5px #5C4033;
+}
+
+/* shows logo as background, formats font, adds padding and shadow */
+h1 { text-align: center;
+	 height: 110px;
+	 font-family: Georgia, "Times New Roman", serif;
+	 font-size: 4.5em;
+	 padding-top: 20px;
+	 text-shadow: 2px 2px 2px #5C4033;
+	 margin-bottom: 0;
+}
+
+/* sets background color, formats font, and sets height */
+header {
+	background-color: #BB8588;
+	color: #BB8588;
+	font-family: Georgia, "Times New Roman", serif;
+	padding: 20px 0 0 0;
+	}
+	
+	
+/* sets the nav to the left of the page and adds padding */
+nav { background-color: #BB8588;
+	 
+      text-align: center;
+      
+}
+
+/* removes default bullets */
+nav ul { list-style-type: none; 
+	 }
+	 
+/* adds padding and formats font adds space left anf right */
+nav li { padding-bottom: 5px;
+		 padding-top: 5px;
+       font-weight: bold;
+       display: inline-block;
+       margin: 0 15px; 
+}
+
+/* formats the color of the links in the nav section */
+nav a { text-decoration: none; }
+nav a:link { color: #FFFFFF; }
+nav a:visited{ color: #F2ECE4; }
+nav a:hover { color: #D7CE93; }
+
+/* sets the main background color, sets left margin to make room for nav, adds padding, and sets height */
+main {  background-color: #F2ECE4;
+        padding: 1px 20px 20px 20px;   
+		min-height: 300px;
+}
+
+
+/* sets background color, adds padding, centers and formats text */
+footer { background-color: #F2ECE4;
+       padding: 20px;
+       text-align: center;
+	   font-size: small;
+	   font-style: italic;
+}
+
+/* changes the font color for paragraphs*/
+p {color: #5C4033;
+	}
+
+/* changes the font color for h2*/
+h2 {color: #BB8588;}
+
+/* id for scenery image. */
+#scenery {height: 300px;
+	background-image: url("../images/scenery.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+/*class for room prices*/
+.price { 
+		font-size: 1.2em;
+		color: #BB8588;
+		font-weight: bold;
+		margin-bottom: 10px; }
+		
+/*class for logo image*/
+.logo {
+	display: block;
+	margin: 0 auto;
+	max-width: 300px;
+	height: auto;
+	padding-bottom: 10px; 
+	}
+.room-section {
+				display: flex;
+				align-items: center;
+				margin-bottom: 20px; }
+				
+.room-section img { 
+					width: 45%;
+					margin-right: 20px;
+					}
+
+.room-section p {
+				 width: 50%;
+				 }
+
+.room-patio { display: flex;
+				align-items: center;
+				margin-bottom: 20px;
+				}
+				
+.room-patio p { 
+				width: 45%;
+				margin-right: 20px;}
+				 
+				 
+.room-patio img { width: 50%;
+				}
+			
+.event-photo-grid { display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					gap: 15px;
+					margin-bottom: 30px;
+					}
+					
+.event-photo-grid img { width: 100%;
+						height: 200px;
+						border-radius: 10px;
+						object-fit: cover;
+						}
+
+nav a:link { color: #F2ECE4; }
+
+nav a:visited { color: #FFFFFF; }
+
+nav a:hover { color: #D7CE93;
+			 text-decoration:underline; }
+			 
+table { width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: inherit;
+}
+
+th, td { border: 1px solid #BB8588;
+  padding: 12px;
+  text-align: left;
+}
+
+th { background-color: #F2ECE4;
+  color: #5C4033;
+}
+
+td { background-color: #FFFFFF;
+}
+
+form { display: grid;
+  width: 60%;
+  gap: 1em;
+  grid-template-columns: 10em 1fr;
+  margin: 20px auto; }
+
+form label { text-align: right;
+  padding-right: 10px; }
+
+form input[type="text"],
+form textarea { width: 100%; }
+
+form input[type="radio"],
+form input[type="checkbox"] { width: auto;
+  margin-right: 5px; }
+
+form textarea { resize: vertical; }
+
+.inline-options {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+form input[type="submit"] {
+  background-color: #BB8588;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  grid-column: span 2;
+  justify-self: center;
+}
+
+
+			 
+@media screen and (max-width: 768px) 
+{ #wrapper { width: 95%;
+    margin: auto;
+  }
+
+
+  nav ul {display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  nav li { margin: 10px 0;
+    display: block;
+  }
+
+  .room-section,
+  .room-patio { flex-direction: column;
+    align-items: center; }
+
+  .room-section img,
+  .room-section p,
+  .room-patio img,
+  .room-patio p { width: 100%;
+    margin: 10px 0;
+  }
+
+  .event-photo-grid { grid-template-columns: 1fr;
+  }
+
+  form { grid-template-columns: 1fr;
+    width: 90%;
+  }
+
+  form input[type="submit"] { width: 100%;
+    grid-column: span 1;
+  }
+
+
+  table { font-size: 0.9em;
+    width: 100%;
+  }
+
+  th, td { padding: 10px;
+  }
+}
+
