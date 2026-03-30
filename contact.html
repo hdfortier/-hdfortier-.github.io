@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contact</title>
+<meta charset="utf-8">
+<meta name="description" content="Contact The Rustic Pour for room reservations or questions about your stay.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- link to style sheet -->
+<link href="styles/styles.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- div assigned to wrapper id -->
+<div id="wrapper">
+  <header>
+      <img src="images/rustic-logo.png" alt="The Rustic Pour Logo" class="logo">
+  </header>
+  <!-- nav with links to other pages -->
+  <nav>
+  <ul> 
+    <li><a href="index.html">Home</a></li>
+	<li><a href="rooms/merlot_room.html">Merlot Room</a></li>
+	<li><a href="rooms/rose_room.html">Rosé Room</a></li>
+	<li><a href="events/weekend.html">Weekend Events</a></li>
+	<li><a href="contact.html">Contact</a></li>
+  </ul>
+  </nav>
+  <main>
+  <!-- manin section-->
+  <h3>Contact Form</h3>
+  
+	<form action="https://webdevbasics.net/scripts/demo.php" method="post">
+  <label for="fullname">Full Name:</label>
+  <input type="text" id="fullname" name="fullname" required>
+
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email" required>
+
+  <label for="merlot">Preferred Room:</label>
+  <div class="inline-options">
+    <input type="radio" id="merlot" name="room" value="Merlot">
+    <label for="merlot">Merlot</label>
+    <input type="radio" id="rose" name="room" value="Rosé">
+    <label for="rose">Rosé</label>
+  </div>
+
+  <label for="tour">Sign me up for the wine tour:</label>
+  <input type="checkbox" id="tour" name="tour" value="Yes">
+
+  <label for="requests">Special Requests:</label>
+  <textarea id="requests" name="requests" rows="5" cols="40" placeholder="Let us know any special accommodations..."></textarea>
+
+  <div></div> 
+  <input type="submit" value="Submit">
+</form>
+
+
+  </main>
+  <!-- footer with copyright and email link -->
+  <footer>
+  Copyright &copy; 2025 <br>
+  <a href="mailto:hdfortier@amarillocollege.com">Haley Fortier</a>
+  </footer>
+</div>
+</body>
+</html>
