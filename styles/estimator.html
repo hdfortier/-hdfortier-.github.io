@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Estimator | The Rustic Pour</title>
+    <link href="styles/styles.css" type="test/css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+
+<header>
+    <img src="images/rustic-logo.png" alt="The Rustic Pour Logo" class="logo">
+</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a>&nbsp;</li>
+            <li><a href="rooms/merlot_room.html">Merlot Room</a>&nbsp;</li>
+            <li><a href="rooms/rose_room.html">Rosé Room</a>&nbsp;</li>
+            <li><a href="events/weekend.html">Weekend Events</a>&nbsp;</li>
+            <li><a href="contact.html">Contact</a>&nbsp;</li>
+            <li><a href="estimator.html">Cost Estimator</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="estimator-box">
+            <h2>Plan Your Stay</h2>
+            <p class="estimator-intro">
+                Select your room, choose your number of nights, and add any extras you would like.
+            </p>
+
+            <form id="estimatorForm">
+                <label for="room">Choose a Room:</label>
+                <select id="room" name="room" onchange="calculateTotal()">
+                    <option value="180">Merlot Room - $180 per night</option>
+                    <option value="210">Rosé Room - $210 per night</option>
+                </select>
+
+                <label for="days">Number of Nights:</label>
+                <input type="number" id="days" name="days" min="1" value="1" oninput="calculateTotal()">
+
+                <fieldset class="addons-group">
+                    <legend>Select Add-Ons:</legend>
+
+                    <label class="addon-item">
+                        <input type="checkbox" class="addon" value="45" onchange="calculateTotal()">
+                        Wine Flight Package - $45
+                    </label>
+
+                    <label class="addon-item">
+                        <input type="checkbox" class="addon" value="60" onchange="calculateTotal()">
+                        Picnic Basket for Two - $60
+                    </label>
+
+                    <label class="addon-item">
+                        <input type="checkbox" class="addon" value="35" onchange="calculateTotal()">
+                        Charcuterie Board - $35
+                    </label>
+
+                    <label class="addon-item">
+                        <input type="checkbox" class="addon" value="25" onchange="calculateTotal()">
+                        Late Checkout - $25
+                    </label>
+                </fieldset>
+            </form>
+
+            <p id="total" class="total-output">Estimated Total: $180.00</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 The Rustic Pour</p>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+</div>
+</body>
+</html>
