@@ -325,3 +325,17 @@ form input[type="submit"] {
     font-weight: bold;
     margin-top: 25px;
 }
+
+.review-card {
+    background-color: #FFFFFF;
+    border: 1px solid #BB8588;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 2px 2px 5px #5C4033;
+}
+
+.review-card h3 {
+    color: #BB8588;
+    margin-top: 0;
+}
