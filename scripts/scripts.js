@@ -55,6 +55,8 @@ function showReviews() {
     reviewOutput.innerHTML = output;
 }
 
+
+
 window.onload = function () {
     calculateTotal();
     showReviews();
