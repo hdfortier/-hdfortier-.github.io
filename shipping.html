@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Information</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/common.js" defer></script>
+    <script src="scripts/shipping.js" defer></script>
+</head>
+<body onload="initShippingPage()">
+    <header>
+    <img src="images/rustic-logo.png" alt="The Rustic Pour Logo" class="logo">
+</header>
+	    <nav>
+        <ul>
+            <li><a href="index.html">Home</a>&nbsp;</li>
+            <li><a href="rooms/merlot_room.html">Merlot Room</a>&nbsp;</li>
+            <li><a href="rooms/rose_room.html">Rosé Room</a>&nbsp;</li>
+            <li><a href="events/weekend.html">Weekend Events</a>&nbsp;</li>
+            <li><a href="reviews.html">Reviews</a>&nbsp;</li>
+            <li><a href="contact.html">Contact</a>&nbsp;</li>
+            <li><a href="estimator.html">Cost Estimator</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="store.html">Store Front</a></li>
+
+        </ul>
+    </nav>
+
+    <main class="container shipping-layout">
+        <section class="shipping-card">
+            <h2>Shipping Information</h2>
+            <form id="shipping-form" onsubmit="return validateForm()">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" required>
+
+                <label for="email">Email</label>
+                <input type="text" id="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" required>
+
+                <label for="address">Street Address</label>
+                <input type="text" id="address" required>
+
+                <label for="city">City</label>
+                <input type="text" id="city" required>
+
+                <label for="state">State</label>
+                <input type="text" id="state" required>
+
+                <label for="zipCode">Zip Code</label>
+                <input type="text" id="zipCode" required>
+
+                <label for="notes">Delivery Notes</label>
+                <textarea id="notes" rows="4"></textarea>
+
+            </form>
+
+           
+        </section>
+        <section class="shipping-card">
+
+    <h2>Billing Information</h2>
+
+    <!-- bonus checkbox -->
+    <form id = "billing-form">
+        <div class = "checkbox-row">
+           <input type="checkbox" id="sameAsShipping">
+           <label for ="sameAsShipping"> Billing same as shipping </label>
+        </div>
+    
+
+    <label for="billName">Full Name</label>
+    <input type="text" id="billName" required>
+
+    <label for="billEmail">Email</label>
+    <input type="text" id="billEmail" required>
+
+    <label for="billPhone">Phone Number</label>
+    <input type="text" id="billPhone" required>
+
+    <label for="billAddress">Street Address</label>
+    <input type="text" id="billAddress" required>
+
+    <label for="billCity">City</label>
+    <input type="text" id="billCity" required>
+
+    <label for="billState">State</label>
+    <input type="text" id="billState" required>
+
+    <label for="billZip">Zip Code</label>
+    <input type="text" id="billZip" required>
+    </form>
+</section>
+
+        <section class="summary-card">
+            <h2>Order Summary</h2>
+            <div id="shipping-summary"></div>
+            <button type="button" id="placeOrderBtn" class="action-button primary-button">Place Simulated Order</button>
+            <div id="shipping-message"></div>
+        </section>
+    </main>
+</body>
+</html>

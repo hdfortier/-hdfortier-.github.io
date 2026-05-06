@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/common.js"></script>
+    <script src="scripts/cart.js"></script>
+</head>
+<body onload="renderCart()">
+    <header>
+        <img src="images/rustic-logo.png" alt="The Rustic Pour Logo" class="logo">
+    </header>
+
+    <nav>
+    <ul>
+        <li><a href="index.html">Home</a>&nbsp;</li>
+	    <li><a href="rooms/merlot_room.html">Merlot Room</a>&nbsp;</li>
+	    <li><a href="rooms/rose_room.html">Rosé Room</a>&nbsp;</li>
+	    <li><a href="events/weekend.html">Weekend Events</a>&nbsp;</li>
+	    <li><a href="contact.html">Contact</a>&nbsp;</li>
+        <li><a href="estimator.html">Cost Estimator</a></li>
+        <li><a href="reviews.html">Reviews</a>&nbsp;</li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+        <li><a href="store.html">Shop</a>&nbsp;</li>
+    </ul>
+</nav>
+
+ <main class="container">
+    <section class="intro-card">
+        <h2>Shopping Cart</h2>
+        <p>You can change quantity here. The total updates automatically.</p>
+    </section>
+
+    <section id="cart-area" class="cart-card"></section>
+
+    <div style="text-align:center; margin-bottom:20px;">
+        <a class="action-button primary-button" href="store.html">Continue Shopping</a>
+        <a class="action-button primary-button" href="shipping.html">Checkout</a>
+    </div>
+
+    <div class="total-box">
+        <strong>Total: $</strong><span id="total-box">0.00</span>
+    </div>
+</main>
+</body>
+</html>

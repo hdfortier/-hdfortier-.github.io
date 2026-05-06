@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rustic Pour Store</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/common.js" defer></script>
+    <script src="scripts/store.js" defer></script>
+</head>
+<body>
+	<header>
+    <img src="images/rustic-logo.png" alt="The Rustic Pour Logo" class="logo">
+</header>
+	    <nav>
+        <ul>
+            <li><a href="index.html">Home</a>&nbsp;</li>
+            <li><a href="rooms/merlot_room.html">Merlot Room</a>&nbsp;</li>
+            <li><a href="rooms/rose_room.html">Rosé Room</a>&nbsp;</li>
+            <li><a href="events/weekend.html">Weekend Events</a>&nbsp;</li>
+            <li><a href="reviews.html">Reviews</a>&nbsp;</li>
+            <li><a href="contact.html">Contact</a>&nbsp;</li>
+            <li><a href="estimator.html">Cost Estimator</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+
+        </ul>
+    </nav>
+	<main>
+
+	<div class="container">
+		<section class="intro-card">
+			<h2> Storefront</h2>
+			<p>Select options for an item, choose a quantity, and add it to the cart.</p>
+		</section>
+		<div style="text-align:center; margin-bottom:20px;">
+   			<a class="action-button primary-button" href="cart.html">View Cart</a>
+		</div>
+
+	
+	<section class="product-grid">
+
+    
+
+<!--  PRODUCT 1: HOUSE MERLOT BOTTLE  -->
+	<div class="product-card">
+
+    	<!-- Product name -->
+    	<h3>House Merlot Bottle</h3>
+
+   		<!-- Product image -->
+    	<img src="images/store-merlot.jpg" alt="House Merlot Bottle">
+
+		<!-- Price -->
+		<p>$28.00</p>
+
+		<!-- Description -->
+		<p class="product-desc">
+			A rich, smooth red wine inspired by our cozy Merlot Room.
+		</p>
+
+
+		<!-- Quantity selector -->
+		<label>Quantity</label>
+		<select id="qty-1">
+			<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+		</select>
+
+		<!-- Add to cart button (calls JavaScript function) -->
+		<button class="action-button primary-button"
+			onclick="addToCart('House Merlot Bottle', 28.00, 1, 'images/store-merlot.jpg')">
+			Add to Cart
+		</button>
+	</div>
+
+
+<!--  PRODUCT 2: ROSÉ BOTTLE  -->
+<div class="product-card">
+
+    <h3>Rosé Bottle</h3>
+
+    <img src="images/store-rose.jpg" alt="Rosé Bottle">
+
+    <p>$26.00</p>
+
+    <p class="product-desc">
+        A light and floral rosé, perfect for a relaxing vineyard afternoon.
+    </p>
+
+
+    <!-- Quantity dropdown -->
+    <label>Quantity</label>
+    <select id="qty-2">
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+    </select>
+
+    <!-- Add item to cart -->
+    <button class="action-button primary-button"
+        onclick="addToCart('Rosé Bottle', 26.00, 2, 'images/store-rose.jpg')">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- PRODUCT 3: WINE GLASS SET -->
+<div class="product-card">
+
+    <h3>Wine Glass Set</h3>
+
+    <img src="images/store-glasses.jpg" alt="Wine Glass Set">
+
+    <p>$22.00</p>
+
+    <p class="product-desc">
+        A set of two elegant wine glasses for your favorite pour.
+    </p>
+
+
+    <!-- Quantity dropdown -->
+    <label>Quantity</label>
+    <select id="qty-3">
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+    </select>
+
+    <!-- Add item to cart -->
+    <button class="action-button primary-button"
+        onclick="addToCart('Wine Glass Set', 22.00, 3, 'images/store-glasses.jpg')">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- PRODUCT 4: FLOWER BOUQUET -->
+<div class="product-card">
+
+    <h3>Fresh Flower Bouquet</h3>
+
+    <img src="images/store-flowers.jpg" alt="Flower Bouquet">
+
+    <p>$35.00</p>
+
+    <p class="product-desc">
+        A seasonal bouquet inspired by the natural beauty of our vineyard.
+    </p>
+
+
+    <!-- Quantity dropdown -->
+    <label>Quantity</label>
+    <select id="qty-4">
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+    </select>
+
+    <!-- Add item to cart -->
+    <button class="action-button primary-button"
+        onclick="addToCart('Fresh Flower Bouquet', 35.00, 4, 'images/store-flowers.jpg')">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- PRODUCT 5: PICNIC BASKET -->
+<div class="product-card">
+
+    <h3>Picnic Basket Kit</h3>
+
+    <img src="images/store-picnic.jpg" alt="Picnic Basket Kit">
+
+    <p>$45.00</p>
+
+    <p class="product-desc">
+        A cozy picnic kit with snacks, fruit, and rustic treats for two.
+    </p>
+
+
+    <!-- Quantity dropdown -->
+    <label>Quantity</label>
+    <select id="qty-5">
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+    </select>
+
+    <!-- Add item to cart -->
+    <button class="action-button primary-button"
+        onclick="addToCart('Picnic Basket Kit', 45.00, 5, 'images/store-picnic.jpg')">
+        Add to Cart
+    </button>
+	</div>
+    <!-- PRODUCT 6: Wine and Rose Bundle -->
+	<div class="product-card">
+    <h3>Wine & Roses Bundle</h3>
+
+    <img src="images/store-bundle.png" alt="Wine and Roses Bundle">
+
+    <p>$45.00</p>
+
+    <p class="product-desc">
+        A romantic pairing of our signature rosé and a fresh bouquet — perfect for a cozy getaway.
+    </p>
+
+    <label>Quantity</label>
+    <select id="qty-6">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+    </select>
+
+    <button class="action-button primary-button"
+        onclick="addToCart('Wine & Roses Bundle', 45.00, 6, 'images/store-bundle.png')">
+        Add to Cart
+    </button>
+</div>
+	</section>
+</div>
+</main>
